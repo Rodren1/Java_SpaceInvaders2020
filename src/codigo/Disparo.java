@@ -22,7 +22,7 @@ public class Disparo {
                 sonidoDisparo = AudioSystem.getClip();
                 sonidoDisparo.open(
                     AudioSystem.getAudioInputStream(
-                            getClass().getResource("/sonidos/disparosXBOX.wav"))
+                            getClass().getResource("/sonidos/disparo.wav"))
             );
             }
             catch(Exception e){

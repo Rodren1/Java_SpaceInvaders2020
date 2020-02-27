@@ -7,6 +7,8 @@ package codigo;
 
 import java.awt.Image;
 import javax.imageio.ImageIO;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 
 /**
  *
@@ -19,21 +21,24 @@ public class Marciano {
 
     public int posX = 0;
     public int posY = 0;
+    public int velocidad = 1;
 
     private int anchoPantalla;
 
     public int vida = 50;
+    Clip sonidoDisparo;
 
     public Marciano(int _anchoPantalla) {
         anchoPantalla = _anchoPantalla;
+
     }
 
     //método para mover a la nave 
     public void mueve(boolean direccion) {
         if (direccion) {
-            posX++;
+            posX -= velocidad;
         } else {
-            posX--;
+            posX += velocidad;
         }
     }
 }
